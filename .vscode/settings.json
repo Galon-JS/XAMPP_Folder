@@ -139,7 +139,7 @@
   },
   "editor.renderControlCharacters": true,
   "open-php-html-js-in-browser.customHost": "localhost:8081",
-  "open-php-html-js-in-browser.urlToOpen": "http://localhost/",
+  "open-php-html-js-in-browser.urlToOpen": "file:///",
   "open-php-html-js-in-browser.customBrowserPath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
   "liveServer.settings.proxy": {
     "enable": false,
@@ -335,5 +335,6 @@
       "name": "myfirstssh",
       "merge": true
     }
-  ]
+  ],
+  "open-php-html-js-in-browser.documentRootFolder": "E:\\Program Folder\\xampp\\htdocs\\*"
 }
