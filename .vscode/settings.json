@@ -1,0 +1,8 @@
+{
+  "sync.quietSync": true,
+  "sync.forceUpload": true,
+  "sync.autoDownload": true,
+  "sync.forceDownload": true,
+  "sync.autoUpload": true,
+  "sync.gist": "92b6b5c177c7974d018d578543899dc4"
+}
