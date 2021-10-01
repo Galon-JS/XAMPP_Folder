@@ -336,5 +336,6 @@
       "merge": true
     }
   ],
-  "open-php-html-js-in-browser.documentRootFolder": "E:\\Program Folder\\xampp\\htdocs\\*"
+  "open-php-html-js-in-browser.documentRootFolder": "E:\\Program Folder\\xampp\\htdocs\\*",
+  "editor.columnSelection": true
 }
