@@ -1,4 +1,26 @@
-<template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0<template>
     <div class="user-container">
         <h3>{{ user.name }}</h3>
         <p class="balance">{{ user.balance }}</p>
