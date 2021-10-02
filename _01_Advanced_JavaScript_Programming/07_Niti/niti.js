@@ -1,4 +1,5 @@
 console.info('HELLOooo')
+console.info('HELLOooo')
 
 const myButton = document.querySelector('.btn')
 myButton.addEventListener('click', () => {
