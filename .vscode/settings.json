@@ -14,5 +14,6 @@
   "sync.quietSync": true,
   "liveServer.settings.host": "localhost",
   "liveServer.settings.root": "/",
-  "tabnine.receiveBetaChannelUpdates": true
+  "tabnine.receiveBetaChannelUpdates": true,
+  "files.autoSave": "onFocusChange"
 }
