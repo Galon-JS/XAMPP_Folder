@@ -27,7 +27,7 @@
         }
     ]
 }
-{
+{ 
     "menu": {
         "id": "file",
         "text": "file",
