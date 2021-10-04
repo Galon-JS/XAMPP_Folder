@@ -3,7 +3,7 @@
   "git.confirmSync": false,
   "tabnine.experimentalAutoImports": true,
   "workbench.colorTheme": "Cobalt3",
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 1,
   "liveServer.settings.donotShowInfoMsg": true,
   "security.workspace.trust.untrustedFiles": "open",
   "sync.gist": "bc06279feddce221b38c5321f2c18fc5",
@@ -61,5 +61,6 @@
   ],
   "open-php-html-js-in-browser.documentRootFolder": "E:\\Program Folder\\xampp\\htdocs\\*",
   "editor.columnSelection": true,
-  "workbench.settings.openDefaultSettings": true
+  "workbench.settings.openDefaultSettings": true,
+  "editor.linkedEditing": true
 }
