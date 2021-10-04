@@ -36,15 +36,12 @@
   "open-php-html-js-in-browser.urlToOpen": "file:///",
   "open-php-html-js-in-browser.customHost": "localhost:8081",
   "open-php-html-js-in-browser.customUrlToOpen": "http://localhost:8081/${relativeDirnameDocumentRoot}/${fileBasename}",
-  "open-php-html-js-in-browser.documentRootFolder": "E:\\Program%20Folder\\MAMP\\htdocs\\",
+  // "open-php-html-js-in-browser.documentRootFolder": "E:\\Program%20Folder\\MAMP\\htdocs\\",
   "open-php-html-js-in-browser.customBrowserPath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "python.insidersChannel": "weekly",
   "files.associations": {
       "*.php": "php"
   },
-<<<<<<< Updated upstream
-}
-=======
   "vetur.format.defaultFormatter.ts": "prettier-tslint",
   "git.allowForcePush": true,
   "git.allowNoVerifyCommit": true,
@@ -66,4 +63,3 @@
   "editor.columnSelection": true,
   "workbench.settings.openDefaultSettings": true
 }
->>>>>>> Stashed changes
