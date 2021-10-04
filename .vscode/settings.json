@@ -42,4 +42,28 @@
   "files.associations": {
       "*.php": "php"
   },
+<<<<<<< Updated upstream
 }
+=======
+  "vetur.format.defaultFormatter.ts": "prettier-tslint",
+  "git.allowForcePush": true,
+  "git.allowNoVerifyCommit": true,
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.alwaysSignOff": true,
+  "git.autoStash": true,
+  "git.enableCommitSigning": true,
+  "git.fetchOnPull": true,
+  "git.followTagsWhenSync": true,
+  "git.rebaseWhenSync": true,
+  "git.showPushSuccessNotification": true,
+  "sshfs.configs": [
+    {
+      "name": "myfirstssh",
+      "merge": true
+    }
+  ],
+  "open-php-html-js-in-browser.documentRootFolder": "E:\\Program Folder\\xampp\\htdocs\\*",
+  "editor.columnSelection": true,
+  "workbench.settings.openDefaultSettings": true
+}
+>>>>>>> Stashed changes
