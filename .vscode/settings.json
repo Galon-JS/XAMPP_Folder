@@ -35,7 +35,7 @@
   "open-php-html-js-in-browser.urlToOpen": "file:///",
   "open-php-html-js-in-browser.customHost": "localhost:8081",
   "open-php-html-js-in-browser.customUrlToOpen": "http://localhost:8081/${relativeDirnameDocumentRoot}/${fileBasename}",
-  // "open-php-html-js-in-browser.documentRootFolder": "E:\\Program%20Folder\\MAMP\\htdocs\\",
+  "open-php-html-js-in-browser.documentRootFolder": "E:\\Program%20Folder\\MAMP\\htdocs\\",
   "open-php-html-js-in-browser.customBrowserPath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "python.insidersChannel": "weekly",
   "files.associations": {
@@ -58,8 +58,6 @@
       "merge": true
     }
   ],
-  "open-php-html-js-in-browser.documentRootFolder": "E:\\Program Folder\\xampp\\htdocs\\*",
-  "editor.columnSelection": true,
   "workbench.settings.openDefaultSettings": true,
   "editor.linkedEditing": true,
   "bracket-pair-colorizer-2.forceIterationColorCycle": true,
