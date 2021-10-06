@@ -1,5 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from "./components/App";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
 // let age = 18
 // const elem = (age > 17) ? <div>You are welcome !</div> : <div>You can't enter !</div>
@@ -23,15 +31,15 @@ import ReactDOM from 'react-dom';
 // </ul>
 // ReactDOM.render(elem, document.getElementById('root'))
 
-const colors = ['Amaranth', 'Auburn', 'Chestnut', 'Frostbite']
-const elem = <ul>
-  {
-    colors.map((value, index) => {
-      return <li key={index}>{value}</li>
-    })
-  }
-</ul>
-ReactDOM.render(elem, document.getElementById('root'))
+// const colors = ['Amaranth', 'Auburn', 'Chestnut', 'Frostbite']
+// const elem = <ul>
+//   {
+//     colors.map((value, index) => {
+//       return <li key={index}>{value}</li>
+//     })
+//   }
+// </ul>
+// ReactDOM.render(elem, document.getElementById('root'))
 
 // const user = {
 //   firstName: 'Ana',
