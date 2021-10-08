@@ -4,5 +4,8 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.26.1",
     "fund": "^1.0.0"
+  },
+  "dependencies": {
+    "vue": "^2.6.14"
   }
 }
