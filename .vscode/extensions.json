@@ -39,6 +39,9 @@
         "ms-python.vscode-pylance",
         "ms-python.python",
         "goulinkh.vanilla-framework",
-        "hollowtree.vue-snippets"
+        "hollowtree.vue-snippets",
+        "ms-vscode-remote.remote-containers",
+        "googlecloudtools.cloudcode",
+        "ms-kubernetes-tools.vscode-kubernetes-tools"
     ]
 }
