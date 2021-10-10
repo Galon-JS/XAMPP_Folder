@@ -40,7 +40,6 @@
         "ms-python.vscode-pylance",
         "ms-python.python",
         "goulinkh.vanilla-framework",
-        "hollowtree.vue-snippets",
-        "googlecloudtools.cloudcode"
+        "hollowtree.vue-snippets"
     ]
 }
