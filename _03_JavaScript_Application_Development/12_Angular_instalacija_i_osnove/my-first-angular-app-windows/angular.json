@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "854a15a4-33a1-424a-91d5-74f223fb6fc2"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-first-app-angular": {
+    "my-first-angular-app-windows": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-first-app-angular",
+            "outputPath": "dist/my-first-angular-app-windows",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-first-app-angular:build:production"
+              "browserTarget": "my-first-angular-app-windows:build:production"
             },
             "development": {
-              "browserTarget": "my-first-app-angular:build:development"
+              "browserTarget": "my-first-angular-app-windows:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-first-app-angular:build"
+            "browserTarget": "my-first-angular-app-windows:build"
           }
         },
         "test": {
@@ -105,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "my-first-app-angular"
+  "defaultProject": "my-first-angular-app-windows"
 }
