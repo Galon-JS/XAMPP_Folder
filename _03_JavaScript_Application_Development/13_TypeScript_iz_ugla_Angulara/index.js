@@ -1,5 +1,5 @@
 function great(greeting, name) {
-    return greeting + ' ' + name + '!';
+  return greeting + " " + name + "!";
 }
 // function square(a: (number | string)): number {
 //     return <number>a * <number>a;
