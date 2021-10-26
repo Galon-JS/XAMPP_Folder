@@ -1,6 +1,41 @@
-function great(greeting, name) {
-  return greeting + " " + name + "!";
+class Employee {
+    constructor(code, name) {
+        this.code = code;
+        this.name = name;
+    }
+    getName() {
+        return name;
+    }
 }
+// interface Named {
+//     name: string;
+// }
+// function sayHello(personObj: Named): void {
+//     console.log('Hello' + name);
+// }
+// let person = {
+//     name: 'Ana',
+//     email: 'foo@example.com'
+// }
+// sayHello(person )
+// class Employee {
+//     protected code: number;
+//     private name: string;
+//     // public email: string;
+//     readonly email: string;
+//     constructor(code: number, name: string, email: string) {
+//         this.code = code;
+//         this.name = name;
+//         this.email = email;
+//     }
+// }
+// let emp = new Employee(111, 'Ana', 'email@email.com');
+// emp.email;
+// READONLY: NOT CHANGE
+// emp.email = 'ana@email.com';
+// function great(greeting:string, name?: string): string {
+//     return greeting + ' ' + name + '!';
+// }
 // function square(a: (number | string)): number {
 //     return <number>a * <number>a;
 // }
