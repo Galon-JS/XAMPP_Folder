@@ -8,7 +8,7 @@ class Employee implements Named {
     name: string;
 
     getName(): string {
-        return name;
+        return 'My name is: ' + name;
     }
     constructor(code: number, name: string) {
         this.code = code;

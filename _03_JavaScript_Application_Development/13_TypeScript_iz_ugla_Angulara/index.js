@@ -1,13 +1,19 @@
+/* eslint-disable linebreak-style */
+// eslint-disable-next-line linebreak-style
+/* eslint-disable max-len */
+/* eslint-disable linebreak-style */
+/* eslint-disable require-jsdoc */
+/* eslint-disable linebreak-style */
 class Employee {
-    constructor(code, name) {
-        this.code = code;
-        this.name = name;
-    }
-    getName() {
-        return name;
-    }
+  constructor(code, name) {
+    this.code = code;
+    this.name = name;
+  }
+  getName() {
+    return 'My name is: ' + name;
+  }
 }
-let obj = new Employee(111, 'Ana');
+const obj = new Employee(111, 'Ana');
 console.log('obj: ', obj);
 // interface Named {
 //     name: string;
