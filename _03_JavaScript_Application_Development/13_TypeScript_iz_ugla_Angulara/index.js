@@ -7,6 +7,8 @@ class Employee {
         return name;
     }
 }
+let obj = new Employee(111, 'Ana');
+console.log('obj: ', obj);
 // interface Named {
 //     name: string;
 // }

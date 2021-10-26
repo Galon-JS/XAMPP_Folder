@@ -15,7 +15,8 @@ class Employee implements Named {
         this.name = name;
     }
 }
-
+let obj: Named = new Employee(111, 'Ana');
+console.log('obj: ', obj);
 
 // interface Named {
 //     name: string;
