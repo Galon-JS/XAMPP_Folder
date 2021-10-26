@@ -71,5 +71,6 @@
       "cloudcode.beta.enableApiBrowserV2": true,
       "cloudcode.beta.enableSkaffoldModules": true,
       "sync.removeExtensions": false,
-      "sync.syncExtensions": false
+      "sync.syncExtensions": false,
+      "typescript.tsdk": "node_modules\\typescript\\lib"
     }

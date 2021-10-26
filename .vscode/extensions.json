@@ -38,6 +38,9 @@
         "ms-python.vscode-pylance",
         "ms-python.python",
         "goulinkh.vanilla-framework",
-        "hollowtree.vue-snippets"
+        "hollowtree.vue-snippets",
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "infeng.vscode-react-typescript",
+        "svipas.prettier-plus"
     ]
 }
