@@ -72,5 +72,12 @@
       "cloudcode.beta.enableSkaffoldModules": true,
       "sync.removeExtensions": false,
       "sync.syncExtensions": false,
-      "typescript.tsdk": "node_modules\\typescript\\lib"
+      "typescript.tsdk": "node_modules\\typescript\\lib",
+      "eslint.debug": true,
+      "eslint.format.enable": true,
+      "eslint.alwaysShowStatus": true,
+      "eslint.lintTask.enable": true,
+      "eslint.quiet": true,
+      "eslint.useESLintClass": true,
+      "prettier.eslintIntegration": true
     }

@@ -41,6 +41,7 @@
         "hollowtree.vue-snippets",
         "ms-vscode.vscode-typescript-tslint-plugin",
         "infeng.vscode-react-typescript",
-        "svipas.prettier-plus"
+        "svipas.prettier-plus",
+        "runningcoder.react-snippets"
     ]
 }

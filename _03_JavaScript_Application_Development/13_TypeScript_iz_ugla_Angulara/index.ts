@@ -8,15 +8,24 @@ class Employee implements Named {
     name: string;
 
     getName(): string {
-        return 'My name is: ' + name;
+        return '' + name;
     }
     constructor(code: number, name: string) {
         this.code = code;
         this.name = name;
     }
 }
+class Teacher implements Named {
+
+    protected university: string;
+    name: string;
+
+    getName(): string {
+        return '' + name;
+    }
+}
 let obj: Named = new Employee(111, 'Ana');
-console.log('obj: ', obj);
+let obj2: Named = ne/w Teacher('Brankova', 'Vanja');
 
 // interface Named {
 //     name: string;
