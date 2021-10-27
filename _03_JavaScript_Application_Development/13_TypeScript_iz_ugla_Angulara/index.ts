@@ -25,7 +25,7 @@ class Teacher implements Named {
     }
 }
 let obj: Named = new Employee(111, 'Ana');
-let obj2: Named = ne/w Teacher('Brankova', 'Vanja');
+let obj2: Named = new Teacher('Brankova', 'Vanja');
 
 // interface Named {
 //     name: string;
