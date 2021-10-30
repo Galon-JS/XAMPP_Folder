@@ -1,38 +1,23 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable max-len */
-// eslint-disable-next-line linebreak-style
-// eslint-disable-next-line linebreak-style
-// eslint-disable-next-line linebreak-style
-// eslint-disable-next-line linebreak-style
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line linebreak-style
-/* eslint-disable prefer-const */
-/* eslint-disable linebreak-style */
-/* eslint-disable require-jsdoc */
-/* eslint-disable indent */
 class Employee {
     constructor(code, name) {
         this.code = code;
         this.name = name;
     }
     getName() {
-        // eslint-disable-next-line indent
-        // eslint-disable-next-line indent
-        // eslint-disable-next-line indent
         return '' + name;
-    // eslint-disable-next-line indent
     }
-// eslint-disable-next-line linebreak-style
 }
 class Teacher {
+    constructor(university, name) {
+        this.university = university;
+        this.name = name;
+    }
     getName() {
         return '' + name;
     }
 }
-// eslint-disable-next-line prefer-const
-// eslint-disable-next-line no-unused-vars
 let obj = new Employee(111, 'Ana');
-let obj2 = new Teacher(111, 'Ana');
+let obj2 = new Teacher('Brankova', 'Vanja');
 // interface Named {
 //     name: string;
 // }

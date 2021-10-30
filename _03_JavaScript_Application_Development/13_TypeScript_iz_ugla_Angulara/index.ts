@@ -1,31 +1,41 @@
-interface Named {
-    name: string;
-    getName(): string;
+namespace MyNamespace {
+
+    export let myLet: number = 14;
+
 }
-class Employee implements Named {
+MyNamespace.myLet;
+// interface Named {
+//     name: string;
+//     getName(): string;
+// }
+// class Employee implements Named {
 
-    protected code: number;
-    name: string;
+//     protected code: number;
+//     name: string;
 
-    getName(): string {
-        return '' + name;
-    }
-    constructor(code: number, name: string) {
-        this.code = code;
-        this.name = name;
-    }
-}
-class Teacher implements Named {
+//     getName(): string {
+//         return '' + name;
+//     }
+//     constructor(code: number, name: string) {
+//         this.code = code;
+//         this.name = name;
+//     }
+// }
+// class Teacher implements Named {
 
-    protected university: string;
-    name: string;
+//     protected university: string;
+//     name: string;
 
-    getName(): string {
-        return '' + name;
-    }
-}
-let obj: Named = new Employee(111, 'Ana');
-let obj2: Named = new Teacher('Brankova', 'Vanja');
+//     getName(): string {
+//         return '' + name;
+//     }
+//     constructor(university: string, name: string) {
+//         this.university = university;
+//         this.name = name;
+//     }
+// }
+// let obj: Named = new Employee(111, 'Ana');
+// let obj2: Named = new Teacher('Brankova', 'Vanja');
 
 // interface Named {
 //     name: string;
