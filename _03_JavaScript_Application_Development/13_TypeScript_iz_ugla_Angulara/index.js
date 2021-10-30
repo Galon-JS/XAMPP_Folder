@@ -1,23 +1,36 @@
-class Employee {
-    constructor(code, name) {
-        this.code = code;
-        this.name = name;
-    }
-    getName() {
-        return '' + name;
-    }
-}
-class Teacher {
-    constructor(university, name) {
-        this.university = university;
-        this.name = name;
-    }
-    getName() {
-        return '' + name;
-    }
-}
-let obj = new Employee(111, 'Ana');
-let obj2 = new Teacher('Brankova', 'Vanja');
+var MyNamespace;
+(function (MyNamespace) {
+    MyNamespace.myLet = 14;
+})(MyNamespace || (MyNamespace = {}));
+MyNamespace.myLet;
+// interface Named {
+//     name: string;
+//     getName(): string;
+// }
+// class Employee implements Named {
+//     protected code: number;
+//     name: string;
+//     getName(): string {
+//         return '' + name;
+//     }
+//     constructor(code: number, name: string) {
+//         this.code = code;
+//         this.name = name;
+//     }
+// }
+// class Teacher implements Named {
+//     protected university: string;
+//     name: string;
+//     getName(): string {
+//         return '' + name;
+//     }
+//     constructor(university: string, name: string) {
+//         this.university = university;
+//         this.name = name;
+//     }
+// }
+// let obj: Named = new Employee(111, 'Ana');
+// let obj2: Named = new Teacher('Brankova', 'Vanja');
 // interface Named {
 //     name: string;
 // }
