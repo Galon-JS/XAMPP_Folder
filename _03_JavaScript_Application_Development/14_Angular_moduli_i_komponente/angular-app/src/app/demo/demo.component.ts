@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  constructor() { }
+  name: string;
+
+  constructor() {
+
+    this.name = "Ana";
+
+   }
 
   ngOnInit(): void {
   }
