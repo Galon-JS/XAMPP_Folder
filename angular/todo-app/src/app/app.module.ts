@@ -10,6 +10,8 @@ import { ItemComponent } from './item/item.component';
 import { ItemsCompletedComponent } from './items-completed/items-completed.component';
 import { ItemActiveComponent } from './item-active/item-active.component';
 import { ItemsFilterPipe } from './pipes/items-filter.pipe';
+import { DemoComponent } from './demo/demo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { ItemsFilterPipe } from './pipes/items-filter.pipe';
     ItemComponent,
     ItemsCompletedComponent,
     ItemActiveComponent,
-    ItemsFilterPipe
+    ItemsFilterPipe,
+    DemoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

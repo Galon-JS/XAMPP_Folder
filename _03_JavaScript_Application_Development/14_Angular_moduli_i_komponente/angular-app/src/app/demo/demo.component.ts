@@ -7,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  sayHello() {
-    alert('Heloo');
-  }
-  // message: string;
+  message: any;
+
+  // sayHello() {
+    // alert('Heloo');
+  // }
   
   constructor() {
-    // this.message = 'This is initial value';
+    this.message = 'This is initial value';
   }
 
   ngOnInit(): void {}

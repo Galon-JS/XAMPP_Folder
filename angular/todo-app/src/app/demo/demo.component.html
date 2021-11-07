@@ -1,0 +1,20 @@
+<div [ngClass]='myClasses'>This is my div</div>
+<div [ngClass]='isDeleted ? "deleted" : ""'>This is my div</div>
+<div [ngStyle]='myStyles' [ngClass]='isDeleted ? "deleted" : ""'>This is my div</div>
+<input type="text" [(ngModel)]='message'>
+<div>{{message}}</div>
+<div *ngIf='isVisible'>This is my div Visible</div>
+<ul>
+    <li *ngFor='let item of items'>{{item}}</li>
+</ul>
+<select name="colors" [(ngModel)]='selectedIndex'>
+    <option value="-1">Nothing selected</option>
+    <option *ngFor='let item of items; ; let i = index' value="{{i}}">{{item}}</option>
+</select>
+<div [ngSwitch]="selectedIndex">
+    <div *ngSwitchDefault>nothing selected</div>
+    <div *ngSwitchCase="0">{{items[selectedIndex]}}</div>
+    <div *ngSwitchCase="1">{{items[selectedIndex]}}</div>
+    <div *ngSwitchCase="2">{{items[selectedIndex]}}</div>
+    <div *ngSwitchCase="3">{{items[selectedIndex]}}</div>
+</div>
