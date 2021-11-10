@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabulator</title>
+    <style>
+        .tab-button {
+            border: none;
+            border-left: 1px solid #888888;
+            border-right: 1px solid #888888;
+            border-top: 1px solid #888888;
+            background: none;
+            outline: none;
+        }
+        .tab-nav {
+            border-bottom: 2px solid #888888;
+        }
+        .tab {
+            background-color: #cccccc;
+            padding: 5px;
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="tab-nav">
+            <button @click="tab=1" class="tab-button">Tab 1</button>
+            <button @click="tab=2" class="tab-button">Tab 2</button>
+            <button @click="tab=3" class="tab-button">Tab 3</button>
+        </div>
+        <div>
+            <div v-show="tab==1" class="tab">Content of Tab 1</div>
+            <div v-show="tab==2" class="tab">Content of Tab 2</div>
+            <div v-show="tab==3" class="tab">Content of Tab 3</div>
+        </div>
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./js/tabulator.js"></script>
+</body>
+</html>
