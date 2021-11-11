@@ -42,6 +42,7 @@
         "ms-vscode.vscode-typescript-tslint-plugin",
         "infeng.vscode-react-typescript",
         "svipas.prettier-plus",
-        "runningcoder.react-snippets"
+        "runningcoder.react-snippets",
+        "tobermory.es6-string-html"
     ]
 }

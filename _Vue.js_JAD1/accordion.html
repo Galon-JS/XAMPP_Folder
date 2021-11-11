@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Accordion</title>
+    <style>
+        .accordion-button {
+            display: flex;
+            width: 100%;
+            border: 1px solid #888888;
+            background-color: #424242;
+            color: white;
+            justify-content: space-between;
+        }
+        .accordion {
+            min-height: 200px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="acc1=!acc1" class="accordion-button">
+            <span>Accordion 1</span>
+            <i v-show="acc1==1" class="fa fa-arrow-circle-up"></i>
+            <i v-show="acc1==0" class="fa fa-arrow-circle-down"></i>
+        </button>
+        <div v-show="acc1==1" class="accordion">Content for accordion 1</div>
+        <button @click="acc2=!acc2" class="accordion-button">
+            <span>Accordion 2</span>
+            <i v-show="acc2==1" class="fa fa-arrow-circle-up"></i>
+            <i v-show="acc2==0" class="fa fa-arrow-circle-down"></i>
+        </button>
+        <div v-show="acc2==1" class="accordion">Content for accordion 2</div>
+        <button @click="acc3=!acc3" class="accordion-button">
+            <span>Accordion 3</span>
+            <i v-show="acc3==1" class="fa fa-arrow-circle-up"></i>
+            <i v-show="acc3==0" class="fa fa-arrow-circle-down"></i>
+        </button>
+        <div v-show="acc3==1" class="accordion">Content for accordion 3</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./js/accordion.js"></script>
+</body>
+</html>
