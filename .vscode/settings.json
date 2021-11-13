@@ -6,7 +6,6 @@
       "workbench.colorTheme": "Cobalt3",
       "window.zoomLevel": -1,
       "liveServer.settings.donotShowInfoMsg": true,
-      "security.workspace.trust.untrustedFiles": "open",
       "sync.gist": "bc06279feddce221b38c5321f2c18fc5",
       "sync.autoDownload": true,
       "sync.autoUpload": true,
@@ -79,6 +78,7 @@
       "eslint.lintTask.enable": true,
       "eslint.quiet": true,
       "eslint.useESLintClass": true,
+      "editor.minimap.maxColumn": 80,
+      "jshint.lintHTML": true,
       "prettier.eslintIntegration": true,
-      "editor.minimap.maxColumn": 80
     }
