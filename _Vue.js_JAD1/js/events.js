@@ -1,7 +1,8 @@
 const app = new Vue({
     el: '#app',
     data: {
-        count: 0
+        count: 0,
+        bgColor: 'color'
     },
     methods: {
         alert_name: function () {
@@ -13,6 +14,12 @@ const app = new Vue({
         },
         decrease_count: function () {
             this.count--
+        },
+        reset: function () {
+            this.count = 0
+        },
+        change_color: function (color) {
+            this.bgColor = color
         }
     }
 })

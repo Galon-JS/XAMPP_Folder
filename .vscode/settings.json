@@ -79,5 +79,6 @@
       "eslint.lintTask.enable": true,
       "eslint.quiet": true,
       "eslint.useESLintClass": true,
-      "prettier.eslintIntegration": true
+      "prettier.eslintIntegration": true,
+      "editor.minimap.maxColumn": 80
     }
