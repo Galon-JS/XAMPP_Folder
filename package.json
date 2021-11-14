@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "jshint": "^2.13.1",
-    "upgrade": "^1.1.0",
+    "upgrade": "^1.1.0"
   }
 }
