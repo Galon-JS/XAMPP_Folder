@@ -2,24 +2,24 @@ const app = new Vue({
   el: '#app',
   data: {
     count: 0,
-    bgColor: 'color',
+    bgColor: 'color'
   },
   methods: {
     alert_name: function() {
-      const inputYourName = document.querySelector('#your_name');
-      alert('You entered: ' + inputYourName.value);
+      const inputYourName = document.querySelector('#your_name')
+      alert('You entered: ' + inputYourName.value)
     },
     increase_count: function() {
-      this.count++;
+      this.count++
     },
     decrease_count: function() {
-      this.count--;
+      this.count--
     },
     reset: function() {
-      this.count = 0;
+      this.count = 0
     },
     change_color: function(color) {
-      this.bgColor = color;
+      this.bgColor = color
     },
   },
-});
+})
