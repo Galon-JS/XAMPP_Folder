@@ -14,6 +14,5 @@
   "dependencies": {
     "jshint": "^2.13.1",
     "upgrade": "^1.1.0",
-    "vue": "^2.6.14"
   }
 }
