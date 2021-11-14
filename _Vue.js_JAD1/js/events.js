@@ -1,5 +1,4 @@
 const app = new Vue({
-  console.log('app: ', app);
   el: "#app",
   data: {
     count: 0,
