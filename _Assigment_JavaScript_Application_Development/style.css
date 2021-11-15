@@ -1,0 +1,204 @@
+body {
+    background : linear-gradient(45deg, #12006c, #897eff);
+    height     : 100vh;
+    margin     : 0;
+    box-sizing : border-box;
+    font-family: sans-serif;
+}
+
+#app-container {
+    max-width    : 490px;
+    margin       : 0 auto;
+    height       : 95vh;
+    background   : white;
+    border-radius: 5px;
+    box-shadow   : 0 3px 6px rgba(0, 0, 0, 0.16),
+        0 3px 6px rgba(0, 0, 0, 0.23);
+    transform     : translate(0, -50%);
+    top           : 50%;
+    position      : relative;
+    display       : flex;
+    flex-direction: column;
+}
+
+/****************************HEADER*************************************/
+
+header {
+    display: flex;
+    height : 80px;
+
+    border-top-left-radius : 5px;
+    border-top-right-radius: 5px;
+
+    background: #f30909c5;
+
+    flex-shrink: 0;
+}
+
+.header {
+
+    flex      : 1 1 33%;
+    background: rgba(255, 255, 255, 0.2);
+
+    text-align: center;
+    padding   : 8px;
+
+    background-repeat  : no-repeat !important;
+    background-position: center !important;
+
+}
+
+/****************************CONTENT*************************************/
+
+#app-body {
+    flex-grow: 1;
+    overflow : hidden;
+    display  : flex;
+}
+
+.todo-item {
+    padding   : 22px 4px;
+    margin    : 0px 12px;
+    cursor    : pointer;
+    border-top: 1px solid #e8e8e8;
+
+    display    : flex;
+    align-items: center;
+}
+
+
+.todo-item.completed .data {
+    text-decoration: line-through;
+}
+
+.todo-item .data {
+    text-decoration: none;
+}
+
+
+.todo-item-content {
+    flex-grow: 1;
+    color    : #7b7b7b;
+    padding  : 0 16px;
+}
+
+.todo-item-date {
+    display       : flex;
+    flex-direction: column;
+    text-align    : center;
+    font-weight   : bold;
+    background    : #ecb2c3;
+    padding       : 6px 14px;
+    border-radius : 5px;
+    color         : white;
+}
+
+.todo-item-date .day {
+    font-size: 22px;
+}
+
+.todo-item-date .month {
+    font-size: 14px;
+}
+
+.todo-item:hover .todo-item-content {
+    color: #4e4e4e;
+}
+
+
+.delete-btn {
+    display            : inline-block;
+    width              : 36px;
+    height             : 36px;
+    background-image   : url(pics/icon-delete-light.png);
+    background-size    : contain;
+    background-repeat  : no-repeat;
+    background-position: center;
+
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background-image: url(pics/icon-delete.png);
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c7c7c7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #909090;
+}
+
+
+
+.items-container {
+    width      : 100%;
+    flex-shrink: 0;
+
+    display       : flex;
+    flex-direction: column;
+
+    overflow: auto;
+}
+
+.items-container .no-items-message {
+    display: none;
+    margin : auto;
+
+}
+
+.no-items-message:only-child {
+    display: block;
+}
+/****************************FOOTER*************************************/
+
+footer {
+    display                   : flex-row;
+    padding                   : 8px 4px;
+    align-items               : center;
+    flex-shrink               : 0;
+    border-bottom-left-radius : 5px;
+    border-bottom-right-radius: 5px;
+
+    background-color: #baaaca;
+}
+
+input {
+    border : 1px solid rgb(81, 80, 80);
+    padding: 8px;
+
+    flex-grow: 1;
+
+    background: transparent;
+}
+
+input:focus,
+input:active,
+input:hover {
+    border : none;
+    outline: none;
+}
+
+#add-btn {
+    margin-right: 25px;
+    padding: 2px 10px;
+    font-weight  : bold;
+    cursor       : pointer;
+    color        : rgb(13, 7, 118);
+    border: 1px solid rgb(13, 7, 118);
+    border-radius: 5px;
+}
+
+#add-btn:hover {
+    color: rgb(255, 0, 0);
+}
