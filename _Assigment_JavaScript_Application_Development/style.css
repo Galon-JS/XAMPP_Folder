@@ -23,13 +23,10 @@ body {
 header {
     display: flex;
     height : 80px;
-
     border-top-left-radius : 5px;
     border-top-right-radius: 5px;
-
     background: #f30909c5;
     text-align: center;
-
     flex-shrink: 0;
 }
 .header {
@@ -44,15 +41,6 @@ header {
     overflow : hidden;
     display  : flex;
 }
-.todo-item {
-    padding   : 22px 4px;
-    margin    : 0px 12px;
-    cursor    : pointer;
-    border-top: 1px solid #e8e8e8;
-
-    display    : flex;
-    align-items: center;
-}
 .delete-btn {
     display            : inline-block;
     width              : 36px;
@@ -61,16 +49,14 @@ header {
     background-size    : contain;
     background-repeat  : no-repeat;
     background-position: center;
-
     flex-shrink: 0;
-}
-.delete-btn:hover {
-    background-image: url(pics/icon-delete.png);
 }
 .items-container {
     width      : 100%;
     flex-shrink: 0;
     display       : flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     overflow: auto;
 }
@@ -83,29 +69,30 @@ header {
 }
 /****************************FOOTER*************************************/
 footer {
-    display                   : flex-row;
-    justify-content: center;
+    display                   : flex;
+    justify-content: space-around;
     padding                   : 8px 4px;
     align-items               : center;
     flex-shrink               : 0;
     border-bottom-left-radius : 5px;
     border-bottom-right-radius: 5px;
     background-color: #baaaca;
+    
 }
 input {
     border : 1px solid rgb(81, 80, 80);
     padding: 8px;
-    flex-grow: 1;
     background: transparent;
 }
-input:focus,
-input:active,
-input:hover {
-    border : none;
-    outline: none;
+.footer-input {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 25px;
 }
 #add-btn {
     margin-right: 25px;
+    margin-left: 25px;
     padding: 2px 10px;
     font-weight  : bold;
     cursor       : pointer;
