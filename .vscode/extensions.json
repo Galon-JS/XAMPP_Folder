@@ -32,7 +32,6 @@
         "burkeholland.simple-react-snippets",
         "angular.ng-template",
         "johnpapa.angular2",
-        "ms-toolsai.jupyter",
         "christian-kohler.path-intellisense",
         "ms-python.vscode-pylance",
         "ms-python.python",
@@ -42,6 +41,8 @@
         "infeng.vscode-react-typescript",
         "svipas.prettier-plus",
         "runningcoder.react-snippets",
-        "tobermory.es6-string-html"
+        "tobermory.es6-string-html",
+        "prograhammer.tslint-vue",
+        "wcwhitehead.bootstrap-3-snippets"
     ]
 }

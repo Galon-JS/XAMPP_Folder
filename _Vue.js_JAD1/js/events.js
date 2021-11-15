@@ -2,7 +2,7 @@ const app = new Vue({
   el: "#app",
   data: {
     count: 0,
-    bgColor: "color",
+    bgColor: "purple",
   },
   methods: {
     alert_name: function () {
