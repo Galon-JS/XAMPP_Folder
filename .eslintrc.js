@@ -19,6 +19,8 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "semi": "error"
+        "semi": "error",
+        "no-unused-vars": 0,
+        "no-undef": 0
     }
 };
