@@ -15,14 +15,12 @@ window.addEventListener("load", function () {
     var phoneInput = document.getElementById("phone");
     var addButton = document.getElementById("add-btn");
 
-    var allItemsContainer = document.getElementById("all-items-container");
-    var activeItemsContainer = document.getElementById("active-items-container");
-    var completedItemsContainer = document.getElementById("completed-items-container");
+    var itemsContainer = document.getElementsByClassName("items-container");
 
-    var toDoApp = new ToDo(allItemsContainer, activeItemsContainer, completedItemsContainer);
+    var toDoApp = new ToDo(itemsContainer);
 
     addButton.onclick = function () {
-        if (nameInput.value !== '' || phoneInput.value !== '') {
+        if (nameInput.value !== '' && phoneInput.value !== '') {
             toDoApp.add(nameInput.value, phoneInput.value);
             nameInput.value = '';
             phoneInput.value = '';
