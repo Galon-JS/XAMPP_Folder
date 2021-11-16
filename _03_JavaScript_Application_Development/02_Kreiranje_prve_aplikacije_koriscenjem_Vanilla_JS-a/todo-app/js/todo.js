@@ -2,16 +2,7 @@ var ToDo = function( rootElementAll,rootElementActive,rootElementCompleted ) {
 
     this.rootElementAll = rootElementAll;
     this.rootElementActive = rootElementActive;
-    this.rootElementCompleted = rootElementCompleted;
-
-
-    let ToDoItem = function( content,date ) {
-        this.id = Math.random().toString( 36 ).substring( 7 );
-        this.content = content;
-        this.date = date;
-        this.completed = false;
-    };
-
+    this.rootElementCompleted = rootElementCompleted;  
 
     let ToDoItemViewModel = function( toDoItem,views ) {
         this.data = toDoItem;
@@ -172,4 +163,4 @@ var ToDo = function( rootElementAll,rootElementActive,rootElementCompleted ) {
 
     };
 
-}
+};

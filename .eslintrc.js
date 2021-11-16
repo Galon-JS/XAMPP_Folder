@@ -19,7 +19,7 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "semi": "error",
+        "semi": 0,
         "no-unused-vars": 0,
         "no-undef": 0
     }

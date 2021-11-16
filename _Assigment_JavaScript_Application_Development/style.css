@@ -41,6 +41,31 @@ header {
     overflow : hidden;
     display  : flex;
 }
+.todo-contacs {
+    padding   : 22px 4px;
+    margin    : 0px 12px;
+    cursor    : pointer;
+    border-top: 1px solid #e8e8e8;
+
+    display    : flex;
+    align-items: center;
+}
+.todo-contacs .completed .data {
+    border: 2px solid #200606;
+    padding: 5px;
+}
+
+.todo-contacs .data {
+    text-decoration: none;
+}
+
+
+.todo-contacs-content {
+    flex-grow: 1;
+    color    : #7b7b7b;
+    padding  : 0 16px;
+}
+
 .delete-btn {
     display            : inline-block;
     width              : 36px;
@@ -51,7 +76,7 @@ header {
     background-position: center;
     flex-shrink: 0;
 }
-.items-container {
+.contacs-container {
     width      : 100%;
     flex-shrink: 0;
     display       : flex;
@@ -60,11 +85,11 @@ header {
     flex-direction: column;
     overflow: auto;
 }
-.items-container .no-items-message {
+.contacs-container .no-contacs-message {
     display: none;
     margin : auto;
 }
-.no-items-message:only-child {
+.no-contacs-message:only-child {
     display: block;
 }
 /****************************FOOTER*************************************/
@@ -76,19 +101,15 @@ footer {
     flex-shrink               : 0;
     border-bottom-left-radius : 5px;
     border-bottom-right-radius: 5px;
-    background-color: #baaaca;
-    
-}
-input {
-    border : 1px solid rgb(81, 80, 80);
-    padding: 8px;
-    background: transparent;
+    background-color: #baaaca;    
 }
 .footer-input {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     margin-left: 25px;
+    padding: 8px;
+    background: transparent;
 }
 #add-btn {
     margin-right: 25px;
