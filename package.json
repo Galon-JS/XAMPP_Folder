@@ -1,7 +1,4 @@
 {
-  "scripts": {
-    "lint": "vue-cli-service lint"
-  },
   "dependencies": {
     "@angular/cli": "^12.2.12",
     "jshint": "^2.13.1",
@@ -22,6 +19,7 @@
     "eslint-webpack-plugin": "^3.1.1",
     "fund": "^1.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "lint": "^1.1.2",
     "prettier": "2.4.1",
     "react": "^17.0.2",
     "typescript": "^4.4.4",
