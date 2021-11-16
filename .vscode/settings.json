@@ -81,4 +81,5 @@
       "editor.minimap.maxColumn": 80,
       "jshint.lintHTML": true,
       "prettier.eslintIntegration": true,
+      "json.maxItemsComputed": 20000,
     }
