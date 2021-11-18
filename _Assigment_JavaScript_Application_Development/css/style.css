@@ -1,14 +1,14 @@
 body {
     background : linear-gradient(45deg, #12006c, #897eff);
-    height     : 100vh;
+    height     : 60vh;
     margin     : 0;
     box-sizing : border-box;
     font-family: sans-serif;
 }
-#app-container {
+#app {
     max-width    : 490px;
     margin       : 0 auto;
-    height       : 95vh;
+    height       : 55vh;
     background   : white;
     border-radius: 5px;
     box-shadow   : 0 3px 6px rgba(0, 0, 0, 0.16),
@@ -22,7 +22,7 @@ body {
 /****************************HEADER*************************************/
 header {
     display: flex;
-    height : 80px;
+    height : 50px;
     border-top-left-radius : 5px;
     border-top-right-radius: 5px;
     background: #f30909c5;
@@ -31,7 +31,6 @@ header {
 }
 .header {
     flex      : 1 1 33%;
-    padding   : 8px;
     background-repeat  : no-repeat !important;
     background-position: center !important;
 }
@@ -91,6 +90,7 @@ header {
 }
 .no-contacs-message:only-child {
     display: block;
+    
 }
 /****************************FOOTER*************************************/
 footer {
