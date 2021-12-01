@@ -1,13 +1,16 @@
 module.exports = {
         "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:vue/recommended",
-        "plugin:angular/recommended"
-    ],
+          'eslint:recommended',
+          'plugin:react/recommended',
+          'plugin:vue/vue3-recommended',
+          'plugin:angular/recommended',
+          'plugin:vue/essential',
+          '@vue/standard'
+        ],
     "plugins": [
       "react",
       "vue",
+      "vue3",
       "angular"
     ],
     root: true,
@@ -30,6 +33,6 @@ module.exports = {
       'no-undef': 0,
       'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
       'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-      'no-constant-condition': 0
+      'no-constant-condition': 0,
     }
 };
