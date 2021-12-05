@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< Updated upstream
         "extends": [
           'eslint:recommended',
           'plugin:react/recommended',
@@ -12,6 +13,28 @@ module.exports = {
       "vue",
       "vue3",
       "angular"
+=======
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/essential"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 10,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "vue"
+>>>>>>> Stashed changes
     ],
     root: true,
     env: {
