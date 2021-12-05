@@ -1,5 +1,6 @@
 module.exports = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "extends": [
           'eslint:recommended',
           'plugin:react/recommended',
@@ -14,6 +15,8 @@ module.exports = {
       "vue3",
       "angular"
 =======
+=======
+>>>>>>> Stashed changes
     "root": true,
     "env": {
         "browser": true,
@@ -34,6 +37,9 @@ module.exports = {
     },
     "plugins": [
         "vue"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     ],
     root: true,
