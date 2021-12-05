@@ -47,8 +47,14 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "prograhammer.tslint-vue",
         "wcwhitehead.bootstrap-3-snippets"
+=======
+        "wcwhitehead.bootstrap-3-snippets",
+        "hookyqr.beautify",
+        "angular.ng-template"
+>>>>>>> Stashed changes
 =======
         "wcwhitehead.bootstrap-3-snippets",
         "hookyqr.beautify",
