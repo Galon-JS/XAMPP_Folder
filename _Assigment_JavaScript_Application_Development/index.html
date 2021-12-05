@@ -4,32 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacs</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
     <div id="app">
-        <header>
-            <div class="header">
-                <h3>Contacs List</h3>
+        <h3>Contacs List</h3>
+        <form v-on:submit.prevent="addContact">
+            <input v-model="current_Name" type="text" placeholder="Name">
+            <input v-model="current_Phone" type="number" placeholder="Phone">
+            <button type="submit">Add contact</button>
+        </form>
+        <!-- <ol> -->
+            <div v-for="(current_Contact, index) in contacts">                
+                {{current_Contact}}<br>
+                <button v-on:click="deleteContact(index)">Delete</button>
             </div>
-        </header>
-        <main>
-            <div id="app" class="contacs-container">
-                <h4 class="no-contacs-message">No Contacs</h4>
-            </div>                  
-        </main>
-        <footer>
-            <div class="footer-input">
-                <input id="name" type="text" placeholder="Name">
-                <input id="phone" type="tel" placeholder="Phone">
-            </div>
-            <div>
-                <button id="add-btn">Add</button>
-            </div>
-        </footer>
+        <!-- </ol>                            -->
+        <script src="vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    contacts: [],
+                    current_Name: '',
+                    current_Phone: ''
+                },
+                methods: {                    
+                    addContact: function() {
+                        current_Contact = `Name : ${this.current_Name}
+                                           Phone : ${this.current_Phone}`
+                        this.contacts.push(current_Contact)
+                        this.current_Name = ''
+                        this.current_Phone = ''
+                    },
+                    deleteContact: function(index) {
+                        this.contacts.splice(index, 1)
+                    }
+                }
+            })
+        </script>
     </div>
-    <script src="./js/vue.js"></script>
-    <script src="./js/vue.min.js"></script>
-    <script type="application/javascript" src="./js/script.js"></script>
 </body>
 </html>
