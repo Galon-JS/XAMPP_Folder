@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< Updated upstream
         "extends": [
           'eslint:recommended',
           'plugin:react/recommended',
@@ -12,6 +13,8 @@ module.exports = {
       "vue",
       "vue3",
       "angular"],
+=======
+>>>>>>> Stashed changes
     "root": true,
     "env": {
         "browser": true,
@@ -19,13 +22,22 @@ module.exports = {
         "es6": true,
         "node": true
     },
+<<<<<<< Updated upstream
      "parserOptions": {
+=======
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/essential"
+    ],
+    "parserOptions": {
+>>>>>>> Stashed changes
         "ecmaVersion": 10,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
         }
     },
+<<<<<<< Updated upstream
     rules: {
       semi: 0,
       'no-unused-vars': 0,
@@ -33,5 +45,11 @@ module.exports = {
       'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
       'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
       'no-constant-condition': 0,
+=======
+    "plugins": [
+        "vue"
+    ],
+    "rules": {
+>>>>>>> Stashed changes
     }
 }
