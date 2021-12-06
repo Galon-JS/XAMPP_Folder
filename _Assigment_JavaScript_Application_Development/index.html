@@ -14,8 +14,8 @@
             <button type="submit">Add contact</button>
         </form>
         <!-- <ol> -->
-            <div v-for="(current_Contact_Name, index) in contacts">                
-                {{current_Contact_Name}}<br>
+            <div v-for="(current_Contact, index) in contacts">                
+                {{current_Contact}}
                 <button v-on:click="deleteContact(index)">Delete</button>
             </div>
         <!-- </ol>                            -->
@@ -30,11 +30,17 @@
                 },
                 methods: {                    
                     addContact: function() {
-                        current_Contact_Name = `Name : ${this.current_Name}`
-                        current_Contact_Phone = `Phone : ${this.current_Phone}`
-                        this.contacts.push(current_Contact)
-                        this.current_Name = ''
-                        this.current_Phone = ''
+                        if (!this.current_Name || !this.current_Phone) {
+                            alert('Please enter a name or phone')
+                        } else {
+                            current_Contact = `Name : ${this.current_Name} | 
+                                               Phone : ${this.current_Phone}`
+                            this.contacts.push(current_Contact)
+                            localStorage.setItem('Contact', current_Contact)
+                            this.current_Name = ''
+                            this.current_Phone = ''
+                        }
+                        
                     },
                     deleteContact: function(index) {
                         this.contacts.splice(index, 1)
