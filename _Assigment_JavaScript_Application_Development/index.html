@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.js"></script>
     <title>Contacs</title>
 </head>
 <body>
@@ -19,23 +20,22 @@
                 <button v-on:click="deleteContact(index)">Delete</button>
             </div>
         </ol>                           
-        <script src="vue.js"></script>
         <script>
-            let db
-            let request = window.indexedDB.open('ContactDatabase', 2)
+            // let db
+            // let request = window.indexedDB.open('ContactDatabase', 1)
             
-            request.onupgradeneeded = function (event) {
-                db = event.target.result
-                let objectStore = db.createObjectStore('contacts', {keyPath: 'contact'})
-            }
-            request.onsuccess = function (event) {
-                db = event.target.result
-                let transaction = db.transaction('contacts', 'readwrite')
-                let contactObjectStore = transaction.objectStore('contacts')
-            }
-            request.onerror = function (event) {
-                console.error('Error', event.target.error)
-            }
+            // request.onupgradeneeded = function (event) {
+            //     db = event.target.result
+            //     let objectStore = db.createObjectStore('contacts', {keyPath: 'contact'})
+            // }
+            // request.onsuccess = function (event) {
+            //     db = event.target.result
+            //     let transaction = db.transaction('contacts', 'readwrite')
+            //     let contactObjectStore = transaction.objectStore('contacts')
+            // }
+            // request.onerror = function (event) {
+            //     console.error('Error', event.target.error)
+            // }
             new Vue({
                 el: '#app',
                 data: {
@@ -46,8 +46,9 @@
                 },
                 methods: {                    
                     addContact: function() {
+                        console.log('ttt')
                         if (!this.current_Name || !this.current_Phone) {
-                            alert('Please enter a name or phone')
+                            alert('Please enter a name and phone')
                         } else {
                             contact = `Name : ${this.current_Name} | 
                                        Phone : ${this.current_Phone}`
@@ -59,8 +60,13 @@
                     },
                     deleteContact: function(index) {
                         this.contacts.splice(index, 1)
+                    },
+                },
+                created: function() {
+                        if (window.indexedDB) {
+                            console.log("Your browser support indexedDB.")
+                        }
                     }
-                }
             })
         </script>
     </div>

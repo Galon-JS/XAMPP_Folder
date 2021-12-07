@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.js"></script>
+    <title>Contacs</title>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div v-if="ready">
+        <input v-model="name" type="text" placeholder="Name">
+        <input v-model="phone" type="number" placeholder="Phone">
+          <button @click="addCat" :disabled="addDisabled">Add Cat</button>
+          <p/>
+          <ul>
+            <li v-for="cat in cats">
+              {{cat.name}} is {{cat.age}} years old. <button @click="deleteCat(cat.id)">Delete</button>
+            </li>
+          </ul>
+        </div>               
+        <script>
+            Vue.config.productionTip = false;
+            Vue.config.devtools = false;
+
+            const DB_NAME = 'catdb';
+            const DB_VERSION = 1;
+
+            const app = new Vue({
+            el:'#app',
+            data: {
+                db:null,
+                ready:false,
+                addDisabled:false,
+                cats:[]
+            },
+            async created() {
+                this.db = await this.getDb();
+                this.cats = await this.getCatsFromDb();
+                this.ready = true;
+            },
+            methods: {
+                async addCat() {
+                this.addDisabled = true;
+                // random cat for now
+                let cat = {
+                    name: this.name,
+                    age: this.phone
+                };
+                console.log('about to add '+JSON.stringify(cat));
+                await this.addCatToDb(cat);
+                this.cats = await this.getCatsFromDb();
+                this.addDisabled = false;      
+                },
+                async deleteCat(id) {
+                await this.deleteCatFromDb(id);
+                this.cats = await this.getCatsFromDb();      
+                },
+                async addCatToDb(cat) {
+                return new Promise((resolve, reject) => {
+
+                    let trans = this.db.transaction(['cats'],'readwrite');
+                    trans.oncomplete = e => {
+                    resolve();
+                    };
+
+                    let store = trans.objectStore('cats');
+                    store.add(cat);
+
+                });
+                },
+                async deleteCatFromDb(id) {
+                return new Promise((resolve, reject) => {
+                    let trans = this.db.transaction(['cats'],'readwrite');
+                    trans.oncomplete = e => {
+                    resolve();
+                    };
+
+                    let store = trans.objectStore('cats');
+                    store.delete(id);
+                });
+                },
+                async getCatsFromDb() {
+                return new Promise((resolve, reject) => {
+
+                    let trans = this.db.transaction(['cats'],'readonly');
+                    trans.oncomplete = e => {
+                    resolve(cats);
+                    };
+                    
+                    let store = trans.objectStore('cats');
+                    let cats = [];
+                    
+                    store.openCursor().onsuccess = e => {
+                    let cursor = e.target.result;
+                    if (cursor) {
+                        cats.push(cursor.value)
+                        cursor.continue();
+                    }
+                    };
+
+                });
+                },
+                async getDb() {
+                return new Promise((resolve, reject) => {
+
+                    let request = window.indexedDB.open(DB_NAME, DB_VERSION);
+                    
+                    request.onerror = e => {
+                    console.log('Error opening db', e);
+                    reject('Error');
+                    };
+            
+                    request.onsuccess = e => {
+                    resolve(e.target.result);
+                    };
+                    
+                    request.onupgradeneeded = e => {
+                    console.log('onupgradeneeded');
+                    let db = e.target.result;
+                    let objectStore = db.createObjectStore("cats", { autoIncrement: true, keyPath:'id' });
+                    };
+                });
+                }
+            }
+            })
+        </script>
+    </div>
+</body>
+</html>

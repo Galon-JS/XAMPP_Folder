@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,300,500,600");
+body {
+  font: 300 1rem "IBM Plex Sans", sans-serif;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:active,
+*:hover {
+  outline: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+b, i, em, strong,
+h1, h2, h3, h4, h5, h6,
+th, td, pre, ins, del, address,
+input, select, button, textarea {
+  text-transform: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  letter-spacing: inherit;
+}
+
+textarea,
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-clip: padding-box;
+}
+
+a, ins, del, button,
+input, select, textarea {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol,
+menu {
+  list-style: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+pre,
+textarea {
+  overflow: auto;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+  overflow: visible;
+}
+
+textarea {
+  resize: none;
+}
+
+::moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: onAutoFillStart;
+          animation-name: onAutoFillStart;
+  -webkit-transition: background-color 50000s ease-in 0s;
+  transition: background-color 50000s ease-in 0s;
+}
+
+@-webkit-keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+@keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+body {
+  height: 100%;
+}
+
+.analog-clock {
+  top: 50%;
+  right: 50%;
+  width: 50vh;
+  height: 50vh;
+  position: absolute;
+  border-radius: 100%;
+  background-color: white;
+  transform: translate3d(-1.5rem, -50%, 0);
+  filter: drop-shadow(0 0.125rem 0.5rem rgba(0, 0, 0, 0.1));
+}
+.analog-clock::after {
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 2.5%;
+  height: 2.5%;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #edbec5;
+  transform: translate3d(-50%, -50%, 0);
+}
+.analog-clock__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.analog-clock__notch {
+  transform-origin: 50% 100%;
+  position: absolute;
+  width: 1px;
+  height: 49%;
+  bottom: 50%;
+  left: 50%;
+}
+.analog-clock__notch::after {
+  content: "";
+  width: 100%;
+  height: 2.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #b6c3c9;
+}
+.analog-clock__notch.-long::after {
+  width: 2px;
+  height: 7.5%;
+}
+.analog-clock__hand {
+  transform-origin: 50% 100%;
+  background-color: #7392a0;
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  bottom: 50%;
+  left: 50%;
+  border-radius: 2px;
+  transition: transform 1s linear;
+}
+.analog-clock__hand::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: inherit;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.analog-clock__hand.-hours {
+  height: calc(100% / 3);
+  width: 3px;
+  border-radius: 3px;
+  transition: transform 60s linear;
+}
+.analog-clock__hand.-seconds {
+  width: 1px;
+  height: 45%;
+  border-radius: 0;
+  background-color: #edbec5;
+  transition: transform 100ms cubic-bezier(0.6, 0.05, 0, 1.6);
+}
+.analog-clock__hand.-seconds::after {
+  height: 12.5%;
+}
+
