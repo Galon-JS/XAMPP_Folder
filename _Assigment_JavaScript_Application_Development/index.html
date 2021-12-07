@@ -7,36 +7,51 @@
 </head>
 <body>
     <div id="app">
-        <h3>Contacs List</h3>
+        <h3>{{title}}</h3>
         <form v-on:submit.prevent="addContact">
             <input v-model="current_Name" type="text" placeholder="Name">
             <input v-model="current_Phone" type="number" placeholder="Phone">
             <button type="submit">Add contact</button>
         </form>
-        <!-- <ol> -->
-            <div v-for="(current_Contact, index) in contacts">                
-                {{current_Contact}}
+        <ol>
+            <div v-for="(contact, index) in contacts">                
+                {{contact}}
                 <button v-on:click="deleteContact(index)">Delete</button>
             </div>
-        <!-- </ol>                            -->
+        </ol>                           
         <script src="vue.js"></script>
         <script>
+            let db
+            let request = window.indexedDB.open('ContactDatabase', 2)
+            
+            request.onupgradeneeded = function (event) {
+                db = event.target.result
+                let objectStore = db.createObjectStore('contacts', {keyPath: 'contact'})
+            }
+            request.onsuccess = function (event) {
+                db = event.target.result
+                let transaction = db.transaction('contacts', 'readwrite')
+                let contactObjectStore = transaction.objectStore('contacts')
+            }
+            request.onerror = function (event) {
+                console.error('Error', event.target.error)
+            }
             new Vue({
                 el: '#app',
                 data: {
+                    title: 'Contacts List',
                     contacts: [],
                     current_Name: '',
-                    current_Phone: ''
+                    current_Phone: ''                    
                 },
                 methods: {                    
                     addContact: function() {
                         if (!this.current_Name || !this.current_Phone) {
                             alert('Please enter a name or phone')
                         } else {
-                            current_Contact = `Name : ${this.current_Name} | 
-                                               Phone : ${this.current_Phone}`
-                            this.contacts.push(current_Contact)
-                            localStorage.setItem('Contact', current_Contact)
+                            contact = `Name : ${this.current_Name} | 
+                                       Phone : ${this.current_Phone}`
+                            this.contacts.push(contact)
                             this.current_Name = ''
                             this.current_Phone = ''
                         }
