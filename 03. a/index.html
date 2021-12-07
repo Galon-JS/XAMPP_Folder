@@ -11,11 +11,11 @@
         <div v-if="ready">
         <input v-model="name" type="text" placeholder="Name">
         <input v-model="phone" type="number" placeholder="Phone">
-          <button @click="addCat" :disabled="addDisabled">Add Cat</button>
+          <button @click="addContact" :disabled="addDisabled">Add Contact</button>
           <p/>
           <ul>
-            <li v-for="cat in cats">
-              {{cat.name}} is {{cat.age}} years old. <button @click="deleteCat(cat.id)">Delete</button>
+            <li v-for="contact in contacts">
+              {{contact.name}} | {{contact.phone}} | <button @click="deleteContact(contact.id)">Delete</button>
             </li>
           </ul>
         </div>               
@@ -23,7 +23,7 @@
             Vue.config.productionTip = false;
             Vue.config.devtools = false;
 
-            const DB_NAME = 'catdb';
+            const DB_NAME = 'contactdb';
             const DB_VERSION = 1;
 
             const app = new Vue({
@@ -32,69 +32,69 @@
                 db:null,
                 ready:false,
                 addDisabled:false,
-                cats:[]
+                contacts:[]
             },
             async created() {
                 this.db = await this.getDb();
-                this.cats = await this.getCatsFromDb();
+                this.contacts = await this.getcontactsFromDb();
                 this.ready = true;
             },
             methods: {
-                async addCat() {
+                async addContact() {
                 this.addDisabled = true;
-                // random cat for now
-                let cat = {
+                // random contact for now
+                let contact = {
                     name: this.name,
-                    age: this.phone
+                    phone: this.phone
                 };
-                console.log('about to add '+JSON.stringify(cat));
-                await this.addCatToDb(cat);
-                this.cats = await this.getCatsFromDb();
+                
+                await this.addContactToDb(contact);
+                this.contacts = await this.getcontactsFromDb();
                 this.addDisabled = false;      
                 },
-                async deleteCat(id) {
-                await this.deleteCatFromDb(id);
-                this.cats = await this.getCatsFromDb();      
+                async deleteContact(id) {
+                await this.deleteContactFromDb(id);
+                this.contacts = await this.getcontactsFromDb();      
                 },
-                async addCatToDb(cat) {
+                async addContactToDb(contact) {
                 return new Promise((resolve, reject) => {
 
-                    let trans = this.db.transaction(['cats'],'readwrite');
+                    let trans = this.db.transaction(['contacts'],'readwrite');
                     trans.oncomplete = e => {
                     resolve();
                     };
 
-                    let store = trans.objectStore('cats');
-                    store.add(cat);
+                    let store = trans.objectStore('contacts');
+                    store.add(contact);
 
                 });
                 },
-                async deleteCatFromDb(id) {
+                async deleteContactFromDb(id) {
                 return new Promise((resolve, reject) => {
-                    let trans = this.db.transaction(['cats'],'readwrite');
+                    let trans = this.db.transaction(['contacts'],'readwrite');
                     trans.oncomplete = e => {
                     resolve();
                     };
 
-                    let store = trans.objectStore('cats');
+                    let store = trans.objectStore('contacts');
                     store.delete(id);
                 });
                 },
-                async getCatsFromDb() {
+                async getcontactsFromDb() {
                 return new Promise((resolve, reject) => {
 
-                    let trans = this.db.transaction(['cats'],'readonly');
+                    let trans = this.db.transaction(['contacts'],'readonly');
                     trans.oncomplete = e => {
-                    resolve(cats);
+                    resolve(contacts);
                     };
                     
-                    let store = trans.objectStore('cats');
-                    let cats = [];
+                    let store = trans.objectStore('contacts');
+                    let contacts = [];
                     
                     store.openCursor().onsuccess = e => {
                     let cursor = e.target.result;
                     if (cursor) {
-                        cats.push(cursor.value)
+                        contacts.push(cursor.value)
                         cursor.continue();
                     }
                     };
@@ -107,7 +107,7 @@
                     let request = window.indexedDB.open(DB_NAME, DB_VERSION);
                     
                     request.onerror = e => {
-                    console.log('Error opening db', e);
+                    
                     reject('Error');
                     };
             
@@ -116,9 +116,9 @@
                     };
                     
                     request.onupgradeneeded = e => {
-                    console.log('onupgradeneeded');
+                    
                     let db = e.target.result;
-                    let objectStore = db.createObjectStore("cats", { autoIncrement: true, keyPath:'id' });
+                    let objectStore = db.createObjectStore("contacts", { autoIncrement: true, keyPath:'id' });
                     };
                 });
                 }
