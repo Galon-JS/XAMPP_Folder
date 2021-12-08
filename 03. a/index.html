@@ -11,11 +11,11 @@
         <div v-if="ready">
         <input v-model="name" type="text" placeholder="Name">
         <input v-model="phone" type="number" placeholder="Phone">
-          <button @click="addContact" :disabled="addDisabled">Add Contact</button>
-          <p/>
+          <button @click="addContact" :disabled="addDisabled">Add Contact</button>          
           <ul>
             <li v-for="contact in contacts">
-              {{contact.name}} | {{contact.phone}} | <button @click="deleteContact(contact.id)">Delete</button>
+              Name : {{contact.name}} <br> 
+              Phone : {{contact.phone}} <button @click="deleteContact(contact.id)">Delete</button>
             </li>
           </ul>
         </div>               
