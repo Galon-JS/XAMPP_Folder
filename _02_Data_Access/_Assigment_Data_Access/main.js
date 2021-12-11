@@ -5,7 +5,7 @@ console.log( "Heloo !!!" );
 async function addFetchFile ( screen ) {
     screen = document.querySelector( ".screen" );
     try {
-        await fetch( "./quiz.json" )
+        await fetch( "quiz.json" )
             .then( ( response ) => {
                 return response.json();
             } )
