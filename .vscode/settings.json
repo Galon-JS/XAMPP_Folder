@@ -3,7 +3,7 @@
       "git.enableSmartCommit": true,
       "git.confirmSync": false,
       "tabnine.experimentalAutoImports": true,
-      "workbench.colorTheme": "Cobalt3",
+      "workbench.colorTheme": "codeSTACKr Theme",
       "window.zoomLevel": -1,
       "liveServer.settings.donotShowInfoMsg": true,
       "sync.gist": "bc06279feddce221b38c5321f2c18fc5",
@@ -13,7 +13,7 @@
       "sync.forceUpload": true,
       "sync.quietSync": true,
       "liveServer.settings.host": "localhost",
-      "liveServer.settings.port": 8081,
+      "liveServer.settings.port": 8082,
       "liveServer.settings.root": "/",
       "liveServer.settings.CustomBrowser": "chrome",
       "liveServer.settings.useWebExt": true,
@@ -89,4 +89,7 @@
       "json.maxItemsComputed": 20000,
       "editor.wordWrapColumn": 120,
       "editor.minimap.maxColumn": 60,
+      "[sass]": {
+        "editor.defaultFormatter": "syler.sass-indented"
+      },
     }
