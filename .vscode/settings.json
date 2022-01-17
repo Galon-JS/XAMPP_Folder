@@ -13,7 +13,7 @@
       "sync.forceUpload": true,
       "sync.quietSync": true,
       "liveServer.settings.host": "localhost",
-      "liveServer.settings.port": 8082,
+      "liveServer.settings.port": 8084,
       "liveServer.settings.root": "/",
       "liveServer.settings.CustomBrowser": "chrome",
       "liveServer.settings.useWebExt": true,
