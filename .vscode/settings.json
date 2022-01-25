@@ -1,4 +1,4 @@
-{
+[{
   "editor.renderControlCharacters": true,
       "git.enableSmartCommit": true,
       "git.confirmSync": false,
@@ -37,11 +37,9 @@
       "open-php-html-js-in-browser.customUrlToOpen": "http://localhost:8081/${relativeDirnameDocumentRoot}/${fileBasename}",
       "open-php-html-js-in-browser.documentRootFolder": "E:\\Program%20Folder\\MAMP\\htdocs\\",
       "open-php-html-js-in-browser.customBrowserPath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-      "python.insidersChannel": "weekly",
       "files.associations": {
         "*.php": "php"
       },
-      "vetur.format.defaultFormatter.ts": "prettier-tslint",
       "git.allowForcePush": true,
       "git.allowNoVerifyCommit": true,
       "git.alwaysShowStagedChangesResourceGroup": true,
@@ -52,23 +50,10 @@
       "git.followTagsWhenSync": true,
       "git.rebaseWhenSync": true,
       "git.showPushSuccessNotification": true,
-      "sshfs.configs": [
-        {
-          "name": "myfirstssh",
-          "merge": true
-        }
-      ],
       "workbench.settings.openDefaultSettings": true,
       "editor.linkedEditing": true,
-      "bracket-pair-colorizer-2.forceIterationColorCycle": true,
-      "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
-      "bracket-pair-colorizer-2.highlightActiveScope": true,
-      "bracket-pair-colorizer-2.showBracketsInGutter": true,
-      "bracket-pair-colorizer-2.showBracketsInRuler": true,
       "editor.wordWrap": "wordWrapColumn",
       "editor.parameterHints.enabled": false,
-      "cloudcode.beta.enableApiBrowserV2": true,
-      "cloudcode.beta.enableSkaffoldModules": true,
       "sync.removeExtensions": false,
       "sync.syncExtensions": false,
       "typescript.tsdk": "node_modules\\typescript\\lib",
@@ -84,8 +69,6 @@
         "vue",
         "vue3",
       ],
-      "jshint.lintHTML": true,
-      "prettier.eslintIntegration": true,
       "json.maxItemsComputed": 20000,
       "editor.wordWrapColumn": 120,
       "editor.minimap.maxColumn": 60,
@@ -95,4 +78,5 @@
       "[html]": {
         "editor.defaultFormatter": "HookyQR.beautify"
       },
+      "php.executablePath": null,
     }
