@@ -1,9 +1,9 @@
 function quickCheck(arr, elem) {
   // Only change code below this line
-  if (!arr.indexOf(elem)) {
-    return true, console.log(true)
+  if (arr.indexOf(elem)) {
+    return true
   } else {
-    return false, console.log(false)
+    return false
   }
   // Only change code above this line
 }
