@@ -1,28 +1,48 @@
-function quickCheck(arr, elem) {
-  // Only change code below this line
-  if (arr.indexOf(elem)) {
-    return true
-  } else {
-    return false
-  }
-  // Only change code above this line
+console.log('start')
+function mutation(arr) {
+    const element = arr[0].toLowerCase();
+    const element_2 = arr[1].toLowerCase();
+    for (let i = 0; i < element_2.length; i++) {        
+        if (element.indexOf(element_2[i]) < 0) {
+            return false
+        }
+    }
+    return true;
 }
 
-quickCheck(['squash', 'onions', 'shallots'], 'mushrooms')
-console.log('quickCheck: ', quickCheck([]))
+mutation(["hello", "hey"])         //should return false.
+console.log('mutation(["1", ""]', mutation(["hello", "hey"]));
 
-// The quickCheck function should return a boolean (true or false), not a string ("true" or "false")
+mutation(["hello", "Hello"])           //should return true.
+console.log('mutation(["2", ""]', mutation(["hello", "Hello"]));
 
-quickCheck(["squash", "onions", "shallots"], "mushrooms") // should return false
-console.log('quickCheck: ', quickCheck([]))
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])          //should return true.
+console.log('mutation(["3", ""]', mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]));
 
-quickCheck(["onions", "squash", "shallots"], "onions") // should return true
-console.log('quickCheck: ', quickCheck([]))
+mutation(["Mary", "Army"])         //should return true.
+console.log('mutation(["4", ""]', mutation(["Mary", "Army"]));
 
-quickCheck([3, 5, 9, 125, 45, 2], 125) // should return true
-console.log('NNquickCheck: ', quickCheck())
+mutation(["Mary", "Aarmy"])            //should return true.
+console.log('mutation(["5", ""]', mutation(["Mary", "Aarmy"]));
 
-quickCheck([true, false, false], undefined) // should return false
-console.log('quickCheck: ', quickCheck([]))
+mutation(["Alien", "line"])            //should return true.
+console.log('mutation(["6", ""]', mutation(["Alien", "line"]));
 
-// The quickCheck function should utilize the indexOf() method
+mutation(["floor", "for"])         //should return true.
+console.log('mutation(["7", ""]', mutation(["floor", "for"]));
+
+mutation(["hello", "neo"])         //should return false.
+console.log('mutation(["8", ""]', mutation(["hello", "neo"]));
+
+mutation(["voodoo", "no"])         //should return false.
+console.log('mutation(["9", ""]', mutation(["voodoo", "no"]));
+
+mutation(["ate", "date"])          //should return false.
+console.log('mutation(["10", ""]', mutation(["ate", "date"]));
+
+mutation(["Tiger", "Zebra"])           //should return false.
+console.log('mutation(["11", ""]', mutation(["Tiger", "Zebra"]));
+
+mutation(["Noel", "Ole"])          //should return true.console.log('mutation(["", ""]', mutation(["", ""]));
+console.log('mutation(["12", ""]', mutation(["Noel", "Ole"]));
+
