@@ -1,48 +1,73 @@
-console.log('start')
-function mutation(arr) {
-    const element = arr[0].toLowerCase();
-    const element_2 = arr[1].toLowerCase();
-    for (let i = 0; i < element_2.length; i++) {        
-        if (element.indexOf(element_2[i]) < 0) {
-            return false
+const inputStyle = {
+    width: 235,
+    margin: 5
+};
+
+class MagicEightBall extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            userInput: '',
+            randomIndex: ''
+        };
+        this.ask = this.ask.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+    ask() {
+        if (this.state.userInput) {
+            this.setState({
+                randomIndex: Math.floor(Math.random() * 20),
+                userInput: ''
+            });
         }
     }
-    return true;
+    handleChange(event) {
+        this.setState({
+            userInput: event.target.value
+        });
+    }
+    render() {
+        const possibleAnswers = [
+            'It is certain', 'It is decidedly so', 'Without a doubt',
+            'Yes, definitely', 'You may rely on it', 'As I see it, yes',
+            'Outlook good', 'Yes', 'Signs point to yes',
+            'Reply hazy try again', 'Ask again later', 'Better not tell you now',
+            'Cannot predict now', 'Concentrate and ask again', "Don't count on it",
+            'My reply is no', 'My sources say no', 'Most likely',
+            'Outlook not so good', 'Very doubtful'
+        ];
+        const answer = 'change me!'; // Change this line
+        return (<
+      div >
+            <
+                input type='text'
+                value={
+                    this.state.userInput
+                }
+                onChange={
+                    this.handleChange
+                }
+                style={
+                    inputStyle
+                }
+            /> <
+                br />
+            <
+      button onClick={
+                    this.ask
+                } > Ask the Magic Eight Ball! < /button> <
+                    br />
+                <
+      h3 > Answer: < /h3> <
+      p > {
+                            /* Change code below this line */
+                        }
+
+                        {
+                            /* Change code above this line */
+                        } <
+      /p> < /
+      div >
+                        );
+  }
 }
-
-mutation(["hello", "hey"])         //should return false.
-console.log('mutation(["1", ""]', mutation(["hello", "hey"]));
-
-mutation(["hello", "Hello"])           //should return true.
-console.log('mutation(["2", ""]', mutation(["hello", "Hello"]));
-
-mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])          //should return true.
-console.log('mutation(["3", ""]', mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]));
-
-mutation(["Mary", "Army"])         //should return true.
-console.log('mutation(["4", ""]', mutation(["Mary", "Army"]));
-
-mutation(["Mary", "Aarmy"])            //should return true.
-console.log('mutation(["5", ""]', mutation(["Mary", "Aarmy"]));
-
-mutation(["Alien", "line"])            //should return true.
-console.log('mutation(["6", ""]', mutation(["Alien", "line"]));
-
-mutation(["floor", "for"])         //should return true.
-console.log('mutation(["7", ""]', mutation(["floor", "for"]));
-
-mutation(["hello", "neo"])         //should return false.
-console.log('mutation(["8", ""]', mutation(["hello", "neo"]));
-
-mutation(["voodoo", "no"])         //should return false.
-console.log('mutation(["9", ""]', mutation(["voodoo", "no"]));
-
-mutation(["ate", "date"])          //should return false.
-console.log('mutation(["10", ""]', mutation(["ate", "date"]));
-
-mutation(["Tiger", "Zebra"])           //should return false.
-console.log('mutation(["11", ""]', mutation(["Tiger", "Zebra"]));
-
-mutation(["Noel", "Ole"])          //should return true.console.log('mutation(["", ""]', mutation(["", ""]));
-console.log('mutation(["12", ""]', mutation(["Noel", "Ole"]));
-

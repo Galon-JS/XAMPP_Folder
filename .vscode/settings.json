@@ -77,5 +77,8 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.minimap.scale": 3,
-  "color-highlight.matchRgbWithNoFunction": true
+  "color-highlight.matchRgbWithNoFunction": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  }
 }
